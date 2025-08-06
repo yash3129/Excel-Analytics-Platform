@@ -14,7 +14,7 @@ const LoginSignup = ({ setToken }) => {
         setSuccess("");
 
         try {
-        const url = `http://localhost:5000/api/auth/${isLogin ? "login" : "register"}`;
+        const url = `https://excel-analytics-platform-jbt9.onrender.com/api/auth/${isLogin ? "login" : "register"}`;
         const payload = isLogin
             ? { email: form.email, password: form.password }
             : form;

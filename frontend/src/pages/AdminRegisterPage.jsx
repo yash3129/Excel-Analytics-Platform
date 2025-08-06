@@ -10,7 +10,7 @@ const AdminRegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/api/admin/register", {
+      const res = await fetch("https://excel-analytics-platform-jbt9.onrender.com/api/admin/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),

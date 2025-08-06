@@ -6,7 +6,7 @@ const AdminDashboardPage = () => {
   // Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/admin/users");
+      const res = await fetch("https://excel-analytics-platform-jbt9.onrender.com/api/admin/users");
       const data = await res.json();
       setUsers(data);
     } catch (err) {
@@ -23,7 +23,7 @@ const AdminDashboardPage = () => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/admin/users/${id}`, {
+      const res = await fetch(`https://excel-analytics-platform-jbt9.onrender.com/api/admin/users/${id}`, {
         method: "DELETE",
       });
 
